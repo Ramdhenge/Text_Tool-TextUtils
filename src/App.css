@@ -1,38 +1,224 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: rgb(54, 54, 54);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav ul {
+  display: flex;
+  padding: 0% 1%;
+  width: 100%;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav ul li {
+  list-style: none;
+  padding: 1% 2%;
+  margin: 0% 1%;
+  transition: all .4s;
+  cursor: pointer;
+  display: block;
+}
+
+.nav ul li:hover {
+  background: rgb(85, 85, 85);
+}
+
+.nav ul li .l-1{
+  color: red;
+}
+
+.nav ul li:first-of-type{
+  margin-right: 5%;
+  padding: 0vh 0vh;
+}
+
+
+.nav ul li:first-of-type:hover{
+  background: none;
+}
+
+.nav ul li a{
+  text-decoration: none;
+  color: white;
+  padding: 30% 50%;
+  margin-left: -3.4vh;
+}
+
+.nav .search {
+  margin: 0% 2%;
+  display: flex;
+}
+
+.nav .search .search-box {
+  outline: none;
+  padding: 1vh 1vh;
+  border-radius: 1vh;
+  border: 1px solid rgb(134, 102, 185);
+  transition: all .2s;
+}
+
+.nav .search .search-box:focus {
+  box-shadow: 0px 0px 0px 4px rgb(107, 87, 143);
+}
+
+.nav .search button {
+  padding: 1vh 1.5vh;
+  margin: 0vh 1vh;
+  border-radius: 1vh;
+  border: none;
+  cursor: pointer;
+  background: rgb(149, 65, 233);
+  color: white;
+  transition: all .2s;
+}
+
+.nav .end-items{
+  margin-right: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav .search button:hover {
+  box-shadow: 0px 0px 0px 4px rgba(216, 194, 255, 0.568);
+}
+
+.nav svg{
+  height: 30px;
+  width: 30px;
+  margin-right: 1vw;
+  display: none;
+}
+
+.nav p{
+  color: #ff0000;
+  font-size: 2.2vh;
+  width: 4vw;
+  margin: 0vw 6px;
+}
+
+.switch{
+  background: white;
+  margin-right: 3%;
+  padding: 0.3vh 0vh;
+  width: 6.4vh;
+  border-radius: 1.5vh;
+  display: flex;
+  cursor: pointer;
+  transition: all .5s;
+  background: #8f4efff5;
+}
+
+.switch:focus{
+  box-shadow: 0px 0px 0px 4px rgba(192, 157, 252, 0.658);
+}
+
+.switch .circle{
+  transition: all .3s;
+  padding: 1vh 1vh;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid rgb(196, 196, 196);
+}
+
+.container{
+  margin-top: 3% ;
+  display: flex;
+  justify-content: center;
+}
+
+.container .textbox{
+  margin: 2% 0%;
+  padding: 1% 1%;
+  font-family:Arial, Helvetica, sans-serif;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 1vh;
+  font-size: 2.6vh;
+}
+
+.container .clr-btn{
+  margin-top: -16%;
+  margin-left: 45%;
+  padding: 1vh 1.5vh;
+  color: white;
+  background: rgb(255, 24, 24);
+  border: none;
+  border-radius: 1vh;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.container .clr-btn:focus{
+  box-shadow: 0px 0px 0px 4px rgb(253, 161, 161);
+}
+
+.msg{
+  border: .4vh solid rgb(0, 168, 0);
+  height: 5vh;
+  padding: 1vh 3vh;
+  font-size: 2vh;
+  background:#1b8b5df5 ;
+  color: white;
+  display: flex;
+  border-radius: 1vh;
+  align-items: center;
+  visibility: hidden ;
+  transition: all 1s;
+}
+
+.container .buttons{
+  margin-top: 2%;
+  display: flex;
+  
+}
+
+.container .btns{
+  margin: 0% 1%;
+  padding: 1vh 1.5vh;
+  border-radius: 1vh;
+  outline: none;
+  border: 1.5px solid rgb(149, 65, 233);
+  color: rgb(88, 0, 175);
+  background: transparent;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.container .btns:hover{
+  color: white;
+  box-shadow: 0px 0px 0px 4px rgb(207, 161, 253);
+  background: rgb(149, 65, 233);
+}
+
+.lenth span{
+  font-size: 2.2vh;
+  color: rgb(53, 53, 53);
+  font-family:Arial, Helvetica, sans-serif ;
+}
+
+.lenth span:last-of-type{
+  margin-left: 2%;
+}
+
+.preview{
+  margin: 4% 0%;
+}
+
+.pretext{
+  margin-top: 2%;
+  width: 47%;
+  padding: 2% 2%;
+  font-size: 2.3vh;
+  box-shadow: 0px 0px 10px rgb(136, 136, 136);
+  position: absolute;
 }
